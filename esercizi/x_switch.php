@@ -1,5 +1,5 @@
 <?php
-//creare un algoritmo che data una variabile in input tramite istruzione switch ne identifichi il tipo e lo stampi a video
+//creare un algoritmo  che data una variabile in input tramite istruzione switch ne identifichi il tipo e lo stampi a video
 $input = "test"; 
 $type = null;
 switch (true){
