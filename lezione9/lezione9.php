@@ -87,3 +87,13 @@ function stampa_colore(){
     stampa($colore);
 }
 stampa_colore();
+
+print_r($argv);
+
+#esercizi per casa
+/**
+x_concatena_stringhe
+x_variabili
+x_riga_comando
+xx_array_d_scrivere
+ */
