@@ -46,3 +46,14 @@ $ar=['marco','simone','silvia'];
 print_r($ar);
 print $ar[2];
 $ar2 = array(1,2,3);
+
+//array associativi
+$ar3=[
+    'nome' => 'Giovanni',
+    'cognome' => 'Verdi',
+    'indirizzo' => 'Piazza Repubblica 5',
+    'località' => 'Fano',
+];
+print "\n";
+print $ar3['cognome']. " ". $ar3['nome'] . "\n";
+print "{$ar3['cognome']} {$ar3['nome']}\n";
