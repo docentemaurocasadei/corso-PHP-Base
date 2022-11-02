@@ -57,3 +57,16 @@ $ar3=[
 print "\n";
 print $ar3['cognome']. " ". $ar3['nome'] . "\n";
 print "{$ar3['cognome']} {$ar3['nome']}\n";
+
+$aula=[
+    'simone' => [
+        'colore' => 'verde', 
+        'musica' => 'classica'],
+    'patrizia' => [
+        'colore' => 'bianco', 
+        'musica' => 'rock/pop'],
+    'alessandro' => [
+        'colore' => 'arancione', 
+        'musica' => 'progressive metal'],
+];
+print $aula['simone']['musica'];
