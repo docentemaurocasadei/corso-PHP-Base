@@ -12,3 +12,16 @@
  * es: i=20
  * e a capo la variabile successiva
  */
+
+$i=20;
+$f=50.9;
+$s="ciao";
+$ar=[10,20,30];
+$n=null;
+$b=false;
+print "i={$i}\n";
+print "f={$f}\n";
+print "s={$s}\n";
+print "n={$n}\n";
+print "b={$b}\n";
+print_r($ar);
