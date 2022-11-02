@@ -70,3 +70,20 @@ $aula=[
         'musica' => 'progressive metal'],
 ];
 print $aula['simone']['musica'];
+
+function stampa($valore, $label="il valore è:"){
+    print "\n{$label} {$valore}";
+}
+$s="ciao";
+stampa($s, 'il valore di s è:');
+stampa($s);
+$i=15;
+stampa($i);
+
+//scopo delle variabili
+$colore="verde";
+function stampa_colore(){
+    global $colore;
+    stampa($colore);
+}
+stampa_colore();
