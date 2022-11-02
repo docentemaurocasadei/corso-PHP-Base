@@ -1,2 +1,6 @@
 <?php
-    print "ciao";
+// $x = true;
+// var $x = true;
+$x = boolean-false;
+print $x;
+
