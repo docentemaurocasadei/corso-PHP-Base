@@ -15,4 +15,8 @@ $min = $_GET['min'];
 $max = $_GET['max'];
 if ($min > $max){
     stampa('ERRORE: min non può essere maggiore di max! ');
+    die;    
+}
+for($i=$min;$i<$max;$i++){
+    stampa($i);
 }
