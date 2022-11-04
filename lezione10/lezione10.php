@@ -153,3 +153,7 @@ foreach($ar as $key => $valore){
     stampa($key.":".$valore);
     break;
 }
+
+# esercizi per casa:
+# xx_do_while.php, xx_while.php, xx_while_2.php
+# xx_for.php, xx_operatori_logici.php, x_switch.php
