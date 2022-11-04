@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fbdd4df-6d87-4b02-929c-0929e1432f4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lezione9/lezione9.php" beforeDir="false" afterPath="$PROJECT_DIR$/lezione9/lezione9.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667379956954</updated>
       <workItem from="1667379958323" duration="16000" />
+      <workItem from="1667460394235" duration="7000" />
     </task>
     <servers />
   </component>

@@ -55,7 +55,7 @@ $ar3=[
     'località' => 'Fano',
 ];
 print "\n";
-print $ar3['cognome']. " ". $ar3['nome'] . "\n";
+print $ar3['cognome'] . " " . $ar3['nome'] . "\n";
 print "{$ar3['cognome']} {$ar3['nome']}\n";
 
 $aula=[
@@ -86,13 +86,13 @@ function stampa_colore(){
     global $colore;
     stampa($colore);
 }
-stampa_colore();
+stampa_colore(); 
 
 print_r($argv);
 
 #esercizi per casa
 /**
-x_concatena_stringhe
+x_concatena_stringhe .
 x_variabili
 x_riga_comando
 xx_array_d_scrivere
