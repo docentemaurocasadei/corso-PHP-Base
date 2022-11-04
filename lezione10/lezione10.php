@@ -56,37 +56,82 @@ function stampa($valore){
 // stampa($str);
 
 //operatori logici
-$gg_assenze=20;
-$clienti_gestiti=15;
+// $gg_assenze=20;
+// $clienti_gestiti=15;
 
-//premio aziendale a chi ha gestito almeno 20 clienti
-//e ha fatto meno di 19 gg di assenza
-if ($clienti_gestiti>=20 && $gg_assenze<19){
-    stampa('hai ottenuto il premio');
-}
-//bonus micro a chi ha gestito almeno 18 clienti
-//o ha fatto al massimo 25gg di assenza
-if ($clienti_gestiti>=18 || $gg_assenze<=25){
-    stampa('hai ottenuto il bonus micro');
-}
-//regalo natalizio a chi ha ottenuto almeno uno dei
-//due premi, ma non entrambi
-if(
-    ($clienti_gestiti>=20 && $gg_assenze<19)
-    xor ($clienti_gestiti>=18 || $gg_assenze<=25)
-){
-    stampa('hai ottenuto il regalo natalizio');
-}
+// //premio aziendale a chi ha gestito almeno 20 clienti
+// //e ha fatto meno di 19 gg di assenza
+// if ($clienti_gestiti>=20 && $gg_assenze<19){
+//     stampa('hai ottenuto il premio');
+// }
+// //bonus micro a chi ha gestito almeno 18 clienti
+// //o ha fatto al massimo 25gg di assenza
+// if ($clienti_gestiti>=18 || $gg_assenze<=25){
+//     stampa('hai ottenuto il bonus micro');
+// }
+// //regalo natalizio a chi ha ottenuto almeno uno dei
+// //due premi, ma non entrambi
+// if(
+//     ($clienti_gestiti>=20 && $gg_assenze<19)
+//     xor ($clienti_gestiti>=18 || $gg_assenze<=25)
+// ){
+//     stampa('hai ottenuto il regalo natalizio');
+// }
 
-//operatori di confronto
-$a=15;
-$b='15';
-if ($a==$b){
-    stampa('a è uguale a b');
+// //operatori di confronto
+// $a=15;
+// $b='15';
+// if ($a==$b){
+//     stampa('a è uguale a b');
+// }
+// if ($a===$b){
+//     stampa('a è identica a b');
+// }
+// if ($a!==$b){
+//     stampa('a non è identica a b');
+// }
+// $a=10;
+// $b=12;
+// stampa($a<=>$b);//-1 $a<b | 0 $a==$b | 1 $a>$b
+
+// $a='Macchina';
+// $b='albero';
+// if ($a<$b){
+//     stampa($a . ' è minore di ' . $b);
+// }
+
+// if ($a){
+//     stampa('true');
+// }else{
+//     stampa('false');
+// }
+
+// $a=15;
+// switch (true){
+//     case $a < 10:
+//         stampa('<10');
+//         break;
+//     case $a >= 10 && $a < 20:
+//         stampa('>=10 <20');
+//         break;
+//     case $a >= 20 && $a < 30:
+//         stampa('>=20 <30');
+//         break;
+//     default:
+//         stampa('non so...');
+// }
+
+//cicli
+for($i=1; $i<=30; $i+=2){
+    stampa($i);
 }
-if ($a===$b){
-    stampa('a è identica a b');
+$i=31;
+while($i<=30){
+    stampa($i);
+    $i++;
 }
-if ($a!==$b){
-    stampa('a non è identica a b');
-}
+$i=31;
+do{
+    stampa($i); //viene sempre eseguita
+    $i++;
+}while($i<=30);
