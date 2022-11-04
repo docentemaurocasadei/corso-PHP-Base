@@ -135,3 +135,21 @@ do{
     stampa($i); //viene sempre eseguita
     $i++;
 }while($i<=30);
+
+$ar = [10,20,30,40];
+//questo equivale al for di seguito
+foreach($ar as $valore){
+    stampa($valore);
+}
+for($i=0;$i<count($ar);$i++){
+    if ($i==2){
+        continue;
+    }
+    stampa($ar[$i]);
+}
+
+$ar = ['nome' => 'carlo', 'età' => 25];
+foreach($ar as $key => $valore){
+    stampa($key.":".$valore);
+    break;
+}
