@@ -56,6 +56,8 @@ if ($cn){
     stampa("Connessione errata! ". mysqli_connect_error());
     die;
 }
+inserisci();
+leggi();
 function leggi(){
     global $cn;
     $query="SELECT * FROM timbrature";
@@ -64,4 +66,13 @@ function leggi(){
     while($r=mysqli_fetch_assoc($result)){
         stampa($r["codice"]."-".$r["nominativo"]);
     }
+}
+function inserisci(){
+    global $cn;
+    $codice="B102";
+    $nominativo="Gianni Caroli";
+    $query="INSERT INTO timbrature (codice,nominativo)
+    VALUES ('$codice','$nominativo')";
+    mysqli_query($cn,$query);
+    stampa("dato inserito:" . mysqli_insert_id($cn));
 }
