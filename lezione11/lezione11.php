@@ -56,7 +56,7 @@ if ($cn){
     stampa("Connessione errata! ". mysqli_connect_error());
     die;
 }
-inserisci();
+inserisci1();
 leggi();
 function leggi(){
     global $cn;
@@ -69,10 +69,32 @@ function leggi(){
 }
 function inserisci(){
     global $cn;
-    $codice="B102";
-    $nominativo="Gianni Caroli";
-    $query="INSERT INTO timbrature (codice,nominativo)
-    VALUES ('$codice','$nominativo')";
-    mysqli_query($cn,$query);
-    stampa("dato inserito:" . mysqli_insert_id($cn));
+    try{
+        $codice="B103";
+        // $codice="' or 1=1 or '";
+        $nominativo="Gianni d'Amico";
+        $codice=addslashes($codice);
+        $nominativo=addslashes($nominativo);
+        $query="INSERT INTO timbrature (codice,nominativo)
+        VALUES ('$codice','$nominativo')";
+        mysqli_query($cn,$query);
+        stampa("dato inserito:" . mysqli_insert_id($cn));
+    }catch(Exception $e){
+        stampa($e);
+    }
 }
+function inserisci1(){
+    global $cn;
+    $stmt = mysqli_stmt_init($cn);
+    $codice = "A002";
+    $nominativo = "Mario d'Amico";
+    if (mysqli_stmt_prepare($stmt, "INSERT INTO timbrature (codice,nominativo) VALUES (?,?)")){
+        mysqli_stmt_bind_param($stmt, "ss", $codice, $nominativo );
+        mysqli_stmt_execute($stmt);
+    }
+    if (mysqli_stmt_error($stmt)){
+        print mysqli_stmt_error($stmt);
+    }
+    mysqli_stmt_close($stmt);
+}
+
