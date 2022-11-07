@@ -8,7 +8,12 @@
  */
 
 $numero = $_GET['numero'];
+//se lanciato da terminale
+//$numero = readline('Inserisci un numero da 1 a 10:'); 
+//se passato da argomento da riga comando
+//$numero=$argv[1];
 $estratto = rand(1,10);
+// print(gettype($numero));
 if ($numero == $estratto){
     print "Hai Vinto!";
 }else{
