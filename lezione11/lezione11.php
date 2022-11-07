@@ -40,3 +40,28 @@ if (is_array($ar)){
     stampa('ar NON è un array');
 }
 
+//connessione al database
+//check se connessione ok
+//query
+//eseguiamo query
+//select loop di lettura
+//insert lettura del id inserito [facoltativa]
+//update lettura n. record aggiornati [facoltativa]
+//delete lettura n. record cancellati [facoltativa]
+
+$cn = mysqli_connect("localhost", "root", "", "personale");
+if ($cn){
+    stampa("Connessione ok!");
+}else{
+    stampa("Connessione errata! ". mysqli_connect_error());
+    die;
+}
+function leggi(){
+    global $cn;
+    $query="SELECT * FROM timbrature";
+    $result=mysqli_query($cn, $query);
+    //loop per tutti i record
+    while($r=mysqli_fetch_assoc($result)){
+        stampa($r["codice"]."-".$r["nominativo"]);
+    }
+}
