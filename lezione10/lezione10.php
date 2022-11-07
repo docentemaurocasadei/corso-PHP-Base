@@ -5,15 +5,15 @@ function stampa($valore){
 }
 // $i = 5;
 // print_r($_GET);
-// setcookie('nome', 'Ali', time()+1800);
+// setcookie('nome', 'CARLO', time()+1800);
 // print_r($_COOKIE);
 // print($_SERVER['HTTP_USER_AGENT']);
 
 // define('ADMIN', 'tobia');
-// // $admin='tobia';
+// $admin='tobia';
 // //
 // //
-// // ADMIN='giovanni';
+// ADMIN='giovanni';
 // if (ADMIN=='tobia'){
 //     print 'benvenuto amministratore';
 // }
@@ -34,7 +34,7 @@ function stampa($valore){
 // stampa('potenza:' . ($a ** $b));
 // stampa('modulo:' . ($a % $b));
 // stampa('giacomo' . ' è ' . ' di fano. ');
-
+// stampa('');
 
 
 //espressioni di incremento
@@ -46,6 +46,7 @@ function stampa($valore){
 // stampa($i);
 // $i=10;
 // stampa(20 - $i++); //10
+// stampa($i);
 // $i=10;
 // stampa(20 - ++$i); //9
 
@@ -86,7 +87,11 @@ function stampa($valore){
 // }
 // if ($a===$b){
 //     stampa('a è identica a b');
+// }else{
+//     stampa('a NON è identica a b');
+
 // }
+// !=
 // if ($a!==$b){
 //     stampa('a non è identica a b');
 // }
@@ -94,19 +99,31 @@ function stampa($valore){
 // $b=12;
 // stampa($a<=>$b);//-1 $a<b | 0 $a==$b | 1 $a>$b
 
-// $a='Macchina';
+// $a='macchina';
 // $b='albero';
 // if ($a<$b){
-//     stampa($a . ' è minore di ' . $b);
+//     stampa("$a è minore di $b");
+// }else{
+//     stampa("$a è maggiore di $b");
 // }
-
+// stampa(chr(0x41));
+// die;
 // if ($a){
 //     stampa('true');
 // }else{
 //     stampa('false');
 // }
 
-// $a=15;
+// $a=35;
+// if ($a<10){
+//     stampa('a < 10');
+// }elseif($a>=10 && $a<20){
+//     stampa('a compreso tra 10 e 20');
+// }elseif($a>=20 && $a<30){
+//     stampa('a compreso tra 20 e 30');
+// }else{
+//     stampa('a superiore di 30');
+// }
 // switch (true){
 //     case $a < 10:
 //         stampa('<10');
@@ -119,41 +136,40 @@ function stampa($valore){
 //         break;
 //     default:
 //         stampa('non so...');
+//         break;
 // }
 
 //cicli
-for($i=1; $i<=30; $i+=2){
-    stampa($i);
-}
-$i=31;
-while($i<=30){
-    stampa($i);
-    $i++;
-}
-$i=31;
-do{
-    stampa($i); //viene sempre eseguita
-    $i++;
-}while($i<=30);
+// for($conta=0;$conta<=100;$conta+=20){
+//     stampa($conta);
+// }
+// $i=150;
+// while($i<=100){
+//     stampa("while $i");
+//     $i+=20;
+// }
+// $i=150;
+// do{
+//     stampa("do $i"); //viene sempre eseguita
+//     $i+=20;
+// }while($i<=100);
 
-$ar = [10,20,30,40];
-//questo equivale al for di seguito
-foreach($ar as $valore){
-    stampa($valore);
-}
-for($i=0;$i<count($ar);$i++){
-    if ($i==2){
-        continue;
-    }
-    stampa($ar[$i]);
-}
+// $ar = [10,20,30,40];
+// //questo equivale al for di seguito
+// foreach($ar as $valore){
+//     stampa($valore);
+// }
+// for($i=0;$i<count($ar);$i++){
+//     if ($i==2){
+//         continue;
+//     }
+//     stampa($ar[$i]);
+// }
 
-$ar = ['nome' => 'carlo', 'età' => 25];
-foreach($ar as $key => $valore){
-    stampa($key.":".$valore);
-    break;
+$ar2=['prodotto' => 'smartphone', 'modello' => 'S21'];
+foreach($ar2 as $chiave => $valore){
+    stampa("$chiave: $valore");
 }
-
 # esercizi per casa:
 # xx_do_while.php, xx_while.php, xx_while_2.php
 # xx_for.php, xx_operatori_logici.php, x_switch.php
