@@ -56,7 +56,8 @@ if ($cn){
     stampa("Connessione errata! ". mysqli_connect_error());
     die;
 }
-inserisci1();
+// inserisci1();
+cancella();
 leggi();
 function leggi(){
     global $cn;
@@ -98,3 +99,34 @@ function inserisci1(){
     mysqli_stmt_close($stmt);
 }
 
+function aggiorna(){
+    global $cn;
+    $stmt = mysqli_stmt_init($cn);
+    $codice = "A002";
+    $nominativo = "Mario Rossini";
+    if (mysqli_stmt_prepare($stmt, "UPDATE timbrature 
+        SET codice=?,nominativo=? WHERE codice=?")){
+        mysqli_stmt_bind_param($stmt, "sss", $codice, $nominativo, $codice );
+        mysqli_stmt_execute($stmt);
+    }
+    if (mysqli_stmt_error($stmt)){
+        print mysqli_stmt_error($stmt);
+    }
+    mysqli_stmt_close($stmt);
+}
+
+function cancella(){
+    global $cn;
+    $stmt = mysqli_stmt_init($cn);
+    $codice = "A002";
+    $nominativo = "Mario Rossini";
+    if (mysqli_stmt_prepare($stmt, "DELETE FROM timbrature 
+        WHERE codice=?")){
+        mysqli_stmt_bind_param($stmt, "s", $codice);
+        mysqli_stmt_execute($stmt);
+    }
+    if (mysqli_stmt_error($stmt)){
+        print mysqli_stmt_error($stmt);
+    }
+    mysqli_stmt_close($stmt);
+}
